@@ -1,0 +1,128 @@
+/* need to add nav bar */
+body{
+    margin: 25px;
+    font-family: Helvetica, sans-serif;
+    color: #707070
+}
+
+/* to control header */
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header{
+    background-color: white;
+    padding: 10px;
+    margin: 0px;
+}
+
+.logo-img{
+    width: 50px;
+    height: auto;
+}
+
+.burger{
+    width: 50px;
+    height: auto;
+}
+
+/* meet the team text*/
+h1{
+    font: helvetica, bold;
+    text-align: center;
+    font-size: 20pt;
+
+}
+
+/* about body text */
+p{
+    font-size: 12pt;
+}
+
+/* bio section */
+
+#about-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+.headshot {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 146px;
+    width: 146px;
+    border: solid 1px #707070;
+    margin: 14px;
+}
+
+figcaption{
+    font-size: 20pt;
+    text-align: center;
+}
+
+/* divider for desktop */
+hr{
+  /* used code found on W3 & modified it */
+  margin: 2em auto; /* centered margin */
+  height: 2px; /* thickness of the line */
+  background-color: #3E9A3E; /* color of the line */
+  border: none;
+}
+
+/* h3 is used as a filler for pages that will eventually link */
+h3{
+    font-size: 12pt;
+    font: bold;
+    color:#3E9A3E;
+}
+
+@media screen and (min-width: 1081px){
+    body{
+        display: flex;
+        flex-direction: column;
+        margin: 32px;
+    }
+    #about-container{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+   #text{
+        max-width: 35%;
+        padding: 20pt;
+    }
+    /* used mobile-menu & desktop_menu to change menu with screen size */
+    #mobile-menu{
+        display: none;
+    }
+    .desktop-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /* controls the spacing of the menu items in desktop */
+    .menu-links {
+        display: flex;
+        gap: 25px;
+    }
+
+}
+
+/* toggeles off desktop menu on mobile & tablet size */
+@media screen and (max-width: 1080px){
+    .desktop-menu{
+        display: none;
+    }
+    
+}
+/* hover state for images turning black and white */
+@media (hover: hover) {
+    img:hover {
+    filter: grayscale(0%);
+}
+  }
